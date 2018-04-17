@@ -1,3 +1,12 @@
+// create database
+const HomeInventoryDatabase = {}
+
+//create tables in the database
+HomeInventoryDatabase.stuff = []
+HomeInventoryDatabase.books = []
+HomeInventoryDatabase.bigTicket = []
+
+
 
 //big ticket items
 const laptop = {
@@ -87,24 +96,17 @@ const pen = {
 	description: 'It\'s a big, heavy fountain pen that lays down a beautiful line. I use it for writing.'
 }
 
+//put stuff in the tables
+HomeInventoryDatabase.bigTicket.push(laptop, cameraGear, sewingMachine, iPad)
+HomeInventoryDatabase.books.push(mementoMori, wonderBook, safeBook, completeCH, kindle, stolenBook, voynch)
+HomeInventoryDatabase.stuff.push(fabric, jonathanBlanket, pen)
+
+
 const saveDatabase = (databaseObject, localStorageKey) => {
 	const stringifiedDatabase = JSON.stringify(databaseObject)
 	localStorage.setItem(localStorageKey, stringifiedDatabase)
 }
 
-
-// create database
-const HomeInventoryDatabase = {}
-
-//create tables in the database
-HomeInventoryDatabase.stuff = []
-HomeInventoryDatabase.books = []
-HomeInventoryDatabase.bigTicket = []
-
-//put stuff in the tables
-HomeInventoryDatabase.bigTicket.push(laptop, cameraGear, sewingMachine, iPad)
-HomeInventoryDatabase.books.push(mementoMori, wonderBook, safeBook, completeCH, kindle, stolenBook, voynch)
-HomeInventoryDatabase.stuff.push(fabric, jonathanBlanket, pen)
 
 //save the database
 saveDatabase(HomeInventoryDatabase, 'HomeInventory')

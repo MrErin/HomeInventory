@@ -1,5 +1,6 @@
-<!doctype html> 
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>The Correct Home Inventory Page</title>
@@ -7,17 +8,19 @@
 
 </head>
 
-<body>
+<body onLoad="displayStuff()"> 
   <nav></nav>
 
   <header></header>
-  <article id="myStuff">  
-<!-- content populated by JS -->
+  <article id="myStuff">
+    <!-- content populated by JS -->
   </article>
 
   <footer></footer>
 
-  <script src="homeinventory.js"></script>
-  <script src="database.js"></script>
+  <script src="createDatabase.js"></script>
+  <script src="dbLoader.js"></script>
+  <script src="domMaker.js"></script>
 </body>
+
 </html>
