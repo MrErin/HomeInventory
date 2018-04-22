@@ -1,0 +1,180 @@
+/*
+
+▄▄▄▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌▐░▌      ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ 
+▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌     ▐░▌          
+▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░▌          ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ 
+▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌          ▐░▌     ▐░░░░░░░░░░░▌
+▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌▐░▌          ▐░▌      ▀▀▀▀▀▀▀▀▀█░▌
+▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌               ▐░▌
+▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌          ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▄▄▄▄▄▄▄▄▄█░▌
+▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌▐░▌          ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌     ▐░░░░░░░░░░░▌
+ ▀▀▀▀▀▀▀▀▀▀   ▀▀▀▀▀▀▀▀▀▀▀  ▀            ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀       ▀▀▀▀▀▀▀▀▀▀▀ 
+                                                                                                   
+
+ */
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+	background-color: $base-background;
+	color: $base-text-color;
+	font-family: $body-font, sans-serif;
+	@include font-size($body-font-size);
+}
+
+
+*{
+    @include selection{
+        background: $base-text-color;
+        color: #fff;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $accent-background;
+    &:hover, &:active{
+        text-decoration: underline;
+        color: $base-text-color;
+    }
+}
+
+p{
+    @include rem-fallback(margin, 0, 0, 0, 2.4);
+    @include rem-fallback(padding, 0, 0, 0, 0);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font, serif;
+    font-weight: 500;
+    @include rem-fallback(margin, 0, 0, 1.6);
+    @include rem-fallback(padding, 0);
+}
+
+h1{
+    @include font-size($body-font-size + 2);
+}
+
+h2{
+    @include font-size($body-font-size + 1.4);
+}
+
+h3{
+    @include font-size($body-font-size + .8);
+}
+
+h4{
+    @include font-size($body-font-size + .4);
+}
+
+h5{
+    @include font-size($body-font-size + .2);
+}
+
+h6{
+    @include font-size($body-font-size);
+}
+    
+/* Objects */
+
+img{
+    height: auto;
+    max-width: 100%;
+}
+
+.test {
+    border: 5px solid $test-color;
+}
+
+.btn {
+    border-radius: 28px;
+    color: $base-text-color;
+    @include font-size($body-font-size);
+    background: $base-background;
+    padding: 10px 20px 10px 20px;
+    border: solid $base-text-color 5px;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+}
+
+.btn:hover {
+    background: $base-text-color;
+    text-decoration: none;
+    color: $base-background;
+    border: solid $base-background 5px;
+
+}
+
+
+card {
+    border: solid 1px $base-text-color;
+    padding: 5%;
+    border-radius: 10px;
+    margin: 10px;
+    float: left;
+    display: flex;
+}
+
+.centered {
+     margin: 0 auto;
+     text-align: center;
+}
+
+.wrapper{
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.column{
+    flex-direction: column;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.innerwrap {
+    margin: 15px;
+    padding: 15px;
+}
+
+.border {
+    border: 1px solid $base-text-color;
+}
+
+:empty { 
+    background-color: $test-color;
+}
+
+.stuffTableRow {
+    background-color: tomato;
+}
+
+.booksTableRow {
+    background-color: orange;
+}
+
+.bigTicketTableRow {
+    background-color: goldenrod;
+}
+
+.stuffCard {
+    background-color: lime;
+}
+
+.booksCard {
+    background-color: blue;
+}
+
+.bigTicketCard {
+    background-color: purple;
+}

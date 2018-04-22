@@ -4,11 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>The Correct Home Inventory Page</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 
 </head>
 
 <body onLoad="displayStuff()"> 
+
+<!-- copied from city database
+  <div class="dropdown">
+    <button onclick="yearFilter()" class="dropbtn">Filter</button>
+    <select id="years">
+      <option></option>
+      <option value="1988">1988</option>
+      <option value="2000">2000</option>
+      <option value="2001">2001</option>
+      <option value="2006">2006</option>
+      <option value="2008">2008</option>
+    </select>
+  </div> -->
+
+
   <nav></nav>
 
   <header></header>
@@ -18,9 +33,12 @@
 
   <footer></footer>
 
-  <script src="createDatabase.js"></script>
-  <script src="dbLoader.js"></script>
-  <script src="domMaker.js"></script>
+  <script src="./scripts/createDatabase.js"></script>
+  <script src="./scripts/dbLoader.js"></script>
+  <script src="./scripts/appendinator.js"></script>
+  <script src="./scripts/componentFactory.js"></script>
+  <script src="./scripts/domMaker.js"></script>
+  <script src="./scripts/stuffPicker.js"></script>
 </body>
 
 </html>
