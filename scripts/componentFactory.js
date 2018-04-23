@@ -4,6 +4,4 @@ const componentFactory = (type, contents) => {
 	return component
 }
 
-// const card = (type, contents) => componentFactory('card', ...contents)
-// const tableRow = (type, contents) => componentFactory('row', ...contents)
-// const graph = (type, contents) => componentFactory('p', ...contents)
+

@@ -1,23 +1,24 @@
 # Project:
+
 Home Inventory Database
+
 ## Requirements:
 
 ## Currently Working On:
 
-* refactor for component factory
-
-Not sure where the current problem is. Taking a break.
+* styles
+  * Make cards a uniform size
+  * Choose better colors, but keep it to one color for each type of stuff
+  * Make the text on the cards more clearly formatted so you can tell what it is
 
 ## Remaining Features:
 
-* styles
-* refactor code to draw from component factory
 
 ## Stretch Goals:
 
-* interface to filter stuff by category
-
 ## Completed features:
 
+* interface to filter stuff by category
+* refactor for component factory
 * Load stuff to database in local storage
 * Display items on the DOM
