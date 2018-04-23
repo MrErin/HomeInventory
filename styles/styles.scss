@@ -3,7 +3,7 @@
 Author:
 Project:
 
-comment headings generator: http: //patorjk.com/software/taag/#p=display&f=Electronic&t=Base
+comment headings generator: http: //patorjk.com/software/taag/#p=display&f=Electronic&t=Grid
         
 */
 
@@ -11,4 +11,5 @@ comment headings generator: http: //patorjk.com/software/taag/#p=display&f=Elect
 @import "02mixins";
 @import "03variables";
 @import "04defaults";
-@import "05media-queries";
+@import "05grid-layout";
+@import "06media-queries";

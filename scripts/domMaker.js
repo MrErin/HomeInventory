@@ -7,11 +7,23 @@ const displayStuff = (selectedType) => {
 	for (let type in homeInv) {
 		if (type === selectedType || !selectedType) {
 			homeInv[type].forEach(itemInArray => {
-				const itemCard = componentFactory('card', '')
+				const itemCard = componentFactory('section', '')
 				itemCard.classList = ' ' + type + 'Card card'
 				for (let prop in itemInArray) {
-					const pComponent = componentFactory('p', itemInArray[prop])
-					appendinator(itemCard, pComponent)
+					if (prop === 'name'){
+						const pName = componentFactory('h3', itemInArray[prop])
+						pName.classList = 'cardTitle'
+						appendinator(itemCard,pName)
+					} else if (prop === 'location') {
+						const pComponent = componentFactory('p', 'Location: ' + itemInArray[prop])
+						pComponent.classList = 'cardLocation'
+						appendinator(itemCard, pComponent)
+					} else {
+						const pComponent = componentFactory('p', 'Description: ' + itemInArray[prop])
+						pComponent.classList = 'cardDescription'
+						appendinator(itemCard, pComponent)
+					}
+
 				}
 				appendinator(fragment, itemCard)
 			})

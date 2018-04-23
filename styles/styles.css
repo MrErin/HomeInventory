@@ -4,7 +4,7 @@
 Author:
 Project:
 
-comment headings generator: http: //patorjk.com/software/taag/#p=display&f=Electronic&t=Base
+comment headings generator: http: //patorjk.com/software/taag/#p=display&f=Electronic&t=Grid
         
 */
 /*
@@ -175,7 +175,7 @@ table {
  Mixin tutorial
  https: //scotch.io/tutorials/how-to-use-sass-mixins
 
- Useful mixins
+ Some more useful mixins
  http: //zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 
 */
@@ -236,8 +236,7 @@ a:hover, a:active {
 p {
   margin: 0px 0px 0px 24px;
   margin: 0rem 0rem 0rem 2.4rem;
-  padding: 0px 0px 0px 0px;
-  padding: 0rem 0rem 0rem 0rem;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -245,8 +244,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   margin: 0px 0px 16px;
   margin: 0rem 0rem 1.6rem;
-  padding: 0px;
-  padding: 0rem;
+  padding: 0;
 }
 
 h1 {
@@ -297,6 +295,38 @@ img {
   max-width: 100%;
 }
 
+#myStuff {
+  display: grid;
+  padding: 10px;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 10px;
+  grid-gap: 1rem;
+}
+
+.card {
+  border: solid 1px #D6D6D6;
+  padding: 20px;
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 20px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 #D6D6D6;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 #D6D6D6;
+}
+
+.cardTitle {
+  color: #D6D6D6;
+  font-family: Lustria;
+  text-decoration: underline;
+}
+
 .test {
   border: 5px solid red;
 }
@@ -309,7 +339,8 @@ img {
   font-size: 1.6rem;
   line-height: 2.4rem;
   background: #0D0D0D;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
+  padding: 1rem 2rem;
   border: solid #D6D6D6 5px;
   text-decoration: none;
   text-align: center;
@@ -323,15 +354,6 @@ img {
   border: solid #0D0D0D 5px;
 }
 
-card {
-  border: solid 1px #D6D6D6;
-  padding: 5%;
-  border-radius: 10px;
-  margin: 10px;
-  float: left;
-  display: flex;
-}
-
 .centered {
   margin: 0 auto;
   text-align: center;
@@ -339,7 +361,9 @@ card {
 
 .wrapper {
   margin: 15px;
+  margin: 1.5rem;
   padding: 15px;
+  padding: 1.5rem;
   display: flex;
   justify-content: center;
 }
@@ -348,13 +372,11 @@ card {
   flex-direction: column;
 }
 
-.row {
-  flex-direction: row;
-}
-
 .innerwrap {
   margin: 15px;
+  margin: 1.5rem;
   padding: 15px;
+  padding: 1.5rem;
 }
 
 .border {
@@ -365,30 +387,34 @@ card {
   background-color: red;
 }
 
-.stuffTableRow {
-  background-color: tomato;
-}
-
-.booksTableRow {
-  background-color: orange;
-}
-
-.bigTicketTableRow {
-  background-color: goldenrod;
-}
-
 .stuffCard {
-  background-color: lime;
+  background-color: #508A08;
 }
 
 .booksCard {
-  background-color: blue;
+  background-color: #988F09;
 }
 
 .bigTicketCard {
-  background-color: purple;
+  background-color: #055D57;
 }
 
+/*
+
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌ 
+▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌
+▐░▌          ▐░▌       ▐░▌     ▐░▌     ▐░▌       ▐░▌
+▐░▌ ▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌     ▐░▌     ▐░▌       ▐░▌
+▐░▌▐░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░▌     ▐░▌       ▐░▌
+▐░▌ ▀▀▀▀▀▀█░▌▐░█▀▀▀▀█░█▀▀      ▐░▌     ▐░▌       ▐░▌
+▐░▌       ▐░▌▐░▌     ▐░▌       ▐░▌     ▐░▌       ▐░▌
+▐░█▄▄▄▄▄▄▄█░▌▐░▌      ▐░▌  ▄▄▄▄█░█▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌
+▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌ 
+ ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀  
+                                                    
+
+*/
 /* # Media Queries
  ▄▄       ▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
 ▐░░▌     ▐░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
