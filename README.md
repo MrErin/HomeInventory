@@ -1,6 +1,6 @@
-# Project:
+# Home Inventory Database
 
-Home Inventory Database
+A list of some interesting things in my house, pulled from a JSON database.
 
 ## Requirements:
 
@@ -24,3 +24,9 @@ Home Inventory Database
   * Make cards a uniform size
   * Choose better colors, but keep it to one color for each type of stuff
   * Make the text on the cards more clearly formatted so you can tell what it is
+
+## To run
+
+1. Clone the repo.
+2. From the command line, cd into the directory.
+3. Type ```hs -o``` into the command line.
